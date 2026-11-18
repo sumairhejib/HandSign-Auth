@@ -1,0 +1,8 @@
+# Tested with Python 3.12 (MediaPipe 0.10.14 supports Python 3.9 - 3.12)
+mediapipe==0.10.14
+tensorflow>=2.16
+opencv-python
+numpy
+scikit-learn
+matplotlib
+seaborn

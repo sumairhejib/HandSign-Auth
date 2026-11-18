@@ -1,0 +1,237 @@
+{
+  "n_images": 1237,
+  "per_class_images": {
+    "0": 205,
+    "1": 206,
+    "2": 206,
+    "3": 206,
+    "4": 207,
+    "5": 207
+  },
+  "n_detected": 1094,
+  "detection_rate": 0.8843977364591754,
+  "per_class_detected": {
+    "0": 174,
+    "1": 165,
+    "2": 156,
+    "3": 200,
+    "4": 192,
+    "5": 207
+  },
+  "rule_count_acc": 0.8144424131627057,
+  "rule_count_acc_per_class": {
+    "0": 0.034482758620689655,
+    "1": 0.9030303030303031,
+    "2": 0.9166666666666666,
+    "3": 0.985,
+    "4": 0.984375,
+    "5": 1.0
+  },
+  "n_train_orig": 765,
+  "n_train_aug": 3825,
+  "n_val": 164,
+  "n_test": 165,
+  "n_params": 19238,
+  "epochs": 34,
+  "train_acc": 0.9939869046211243,
+  "val_acc": 0.9878048896789551,
+  "train_loss": 0.023160843178629875,
+  "val_loss": 0.05710965394973755,
+  "test_acc": 0.9939393939393939,
+  "test_loss": 0.6043034195899963,
+  "per_class_f1": {
+    "0": 0.9811320754716981,
+    "1": 1.0,
+    "2": 0.9787234042553191,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0
+  },
+  "macro_f1": 0.9933092466211696,
+  "confusion_matrix": [
+    [
+      26,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      25,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      23,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      30,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      29,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      31
+    ]
+  ],
+  "save_load_ok": true,
+  "random_challenges_demo": [
+    [
+      2,
+      1,
+      3,
+      5
+    ],
+    [
+      0,
+      4,
+      0,
+      2
+    ],
+    [
+      4,
+      0,
+      4,
+      1
+    ]
+  ],
+  "demoA": {
+    "challenge": [
+      2,
+      1,
+      3,
+      5
+    ],
+    "verified": true,
+    "steps": [
+      [
+        2,
+        2,
+        1.0
+      ],
+      [
+        1,
+        1,
+        1.0
+      ],
+      [
+        3,
+        3,
+        1.0
+      ],
+      [
+        5,
+        5,
+        0.999
+      ]
+    ]
+  },
+  "demoB": {
+    "challenge": [
+      2,
+      1,
+      3,
+      5
+    ],
+    "performed": [
+      2,
+      1,
+      0,
+      5
+    ],
+    "verified": false,
+    "steps": [
+      [
+        2,
+        2,
+        1.0
+      ],
+      [
+        1,
+        1,
+        1.0
+      ],
+      [
+        3,
+        0,
+        1.0
+      ],
+      [
+        5,
+        5,
+        0.999
+      ]
+    ]
+  },
+  "sim_sessions": 300,
+  "sim_genuine_accept": 0.9766666666666667,
+  "sim_impostor_accept": 0.0,
+  "objectives": [
+    {
+      "objective": "1. Detect hand landmarks (MediaPipe)",
+      "result": "Landmarks found in 1094/1237 images (88.4%)",
+      "evidence": "figs/fig_landmarks.png",
+      "achieved": true
+    },
+    {
+      "objective": "2. Identify raised/lowered fingers and count 0-5",
+      "result": "Rule-based count correct on 81.4% of images",
+      "evidence": "figs/fig_finger_counting.png",
+      "achieved": true
+    },
+    {
+      "objective": "3. Train a neural network gesture classifier",
+      "result": "Trained 34 epochs; train acc 99.4%, val acc 98.8%",
+      "evidence": "figs/fig_training.png",
+      "achieved": true
+    },
+    {
+      "objective": "4. Evaluate the model (accuracy, loss, confusion matrix)",
+      "result": "Test accuracy 99.4%, test loss 0.604",
+      "evidence": "figs/fig_confusion.png",
+      "achieved": true
+    },
+    {
+      "objective": "5. Recognise gestures from new images",
+      "result": "Predicted gesture shown for unseen test photos",
+      "evidence": "figs/fig_recognition.png",
+      "achieved": true
+    },
+    {
+      "objective": "6. Generate random gesture challenges",
+      "result": "Challenges generated: [[2, 1, 3, 5], [0, 4, 0, 2], [4, 0, 4, 1]]",
+      "evidence": "figs/fig_challenge.png",
+      "achieved": true
+    },
+    {
+      "objective": "7. Verify the sequence and show success/failure",
+      "result": "Demo A verified=True, Demo B verified=False; genuine accept 97.7%, impostor accept 0.0%",
+      "evidence": "figs/fig_verify_success.png, figs/fig_verify_fail.png",
+      "achieved": true
+    }
+  ]
+}
